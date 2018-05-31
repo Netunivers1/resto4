@@ -1,0 +1,29 @@
+<div class="container-fluid" style="padding-top: 40px; padding-bottom: 20px;">
+    <div id="overlay" *ngIf="!pizzasCharger;">
+        <div id="text">Chargement des pizza en cours...</div>
+    </div> 
+
+    <div class="row">
+    	<div class="col-md-2"></div>
+    	<div class="col-md-6">
+    		
+    	</div>
+    	<div class="col-md-2"><h4>Petite</h4></div>
+    	<div class="col-md-2"><h4>Grande</h4></div>
+    </div>
+
+    <div class="row aff_mobile" *ngFor="let i of pizzas" style="margin-bottom: 20px;" >
+    	<div class="col-md-2"></div>
+        <div class="col-md-6">
+            <h2>{{i.nom | uppercase}}</h2>
+            <p>{{i.ingredient}}</p>
+        </div>
+
+        <div class="col-md-2">  
+        	<p>{{i.pm}}</p>          
+        </div>
+        <div class="col-md-2"> 
+        	<p>{{i.gm}}</p>           
+        </div>        
+    </div>
+</div>
