@@ -418,62 +418,86 @@
 	</div>
 	
 	<div id="menu">
-		<div parallax class="parallax-entrees" [config]="{axis: X, speed: -.0}">
-			<h4 class="font_4">
-				Nos entrées
-			</h4>
-		</div>
-		<app-menu></app-menu>
-
-		<div parallax class="parallax-plats" [config]="{axis: X, speed: -.0}">
-			<h4 class="font_4">
-				Nos plats
-			</h4>
-		</div>		
-		<app-plat></app-plat>
-
-		<div parallax class="parallax-pizza" [config]="{axis: X, speed: -.0}">
-			<h4 class="font_4">
-				Nos pizzas
-			</h4>
-		</div>	
-		<app-pizza></app-pizza>	
-
-		<div parallax class="parallax-desserts" [config]="{axis: X, speed: -.0}">
-			<h4 class="font_4">
-				Nos desserts
-			</h4>
-		</div>	
-		<app-dessert></app-dessert>	
-
-		<div parallax class="parallax-boissons" [config]="{axis: X, speed: -.0}">
-			<h4 class="font_4">
-				Nos boissons
-			</h4>
-		</div>
-		<div class="container">
-			<div class="tabs">
-				<nav class="tabMenu">
-					<div class="row">
-						<div class="col-md-6 tabMenuList current" (click)="openTab('des', $event)">Nos Boissons</div>
-						<div class="col-md-6 tabMenuList" (click)="openTab('vin', $event)">Nos Vins</div>
-					</div>
-				</nav>
-				<div class="tab" id="des">
-					<app-boisson></app-boisson>
+		<div class="block-menu">
+			<div class="block-menu-container">
+				<div parallax class="parallax-entrees" [config]="{axis: X, speed: -.0}">
+					<h4 class="font_4">
+						Nos entrées
+					</h4>
 				</div>
-				<div class="tab hide-content" id="vin">
-					<app-vins2></app-vins2>
+				<app-menu></app-menu>
+			</div>
+		</div>
+
+		<div class="block-menu">
+			<div class="block-menu-container">
+				<div parallax class="parallax-plats" [config]="{axis: X, speed: -.0}">
+					<h4 class="font_4">
+						Nos plats
+					</h4>
+				</div>		
+				<app-plat></app-plat>
+			</div>
+		</div>
+
+		<div class="block-menu">
+			<div class="block-menu-container">
+				<div parallax class="parallax-pizza" [config]="{axis: X, speed: -.0}">
+					<h4 class="font_4">
+						Nos pizzas
+					</h4>
+				</div>	
+				<app-pizza></app-pizza>
+			</div>
+		</div>
+
+		<div class="block-menu">
+			<div class="block-menu-container">
+				<div parallax class="parallax-desserts" [config]="{axis: X, speed: -.0}">
+					<h4 class="font_4">
+						Nos desserts
+					</h4>
+				</div>	
+				<app-dessert></app-dessert>	
+			</div>
+		</div>
+
+		<div class="block-menu">
+			<div class="block-menu-container">
+				<div parallax class="parallax-boissons" [config]="{axis: X, speed: -.0}">
+					<h4 class="font_4">
+						Nos boissons
+					</h4>
+				</div>
+				<div class="container">
+					<div class="tabs">
+						<nav class="tabMenu">
+							<div class="row">
+								<div class="col-md-6 tabMenuList current" (click)="openTab('des', $event)">Nos Boissons</div>
+								<div class="col-md-6 tabMenuList" (click)="openTab('vin', $event)">Nos Vins</div>
+							</div>
+						</nav>
+						<div class="tab" id="des">
+							<app-boisson></app-boisson>
+						</div>
+						<div class="tab hide-content" id="vin">
+							<app-vins2></app-vins2>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
-		
-		<div parallax class="parallax-platdujour" [config]="{axis: X, speed: -.0}">
-			<h4 class="font_4">
-				Plat du jour & Suggestion
-			</h4>
+
+		<div class="block-menu">
+			<div class="block-menu-container">
+				<div parallax class="parallax-platdujour" [config]="{axis: X, speed: -.0}">
+					<h4 class="font_4">
+						Plat du jour & Suggestion
+					</h4>
+				</div>
+				<app-platdujour></app-platdujour>
+			</div>
 		</div>
-		<app-platdujour></app-platdujour>
 	</div>
 
 	<div id="contact">
