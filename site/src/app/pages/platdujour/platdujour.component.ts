@@ -16,8 +16,8 @@ export class PlatdujourComponent implements OnInit {
 
   ngOnInit() {
     this.loading = true;
-    this.http.get(urlApi + '/platdujour').subscribe((response) => {
-      this.products = (response.json().length) ? response.json() : [];
+    this.http.get(urlApi + '/platdujour/0').subscribe((response) => {
+      this.products = (response.json().contain.length) ? response.json().contain : [];
       this.loading = false;
     });
   }
