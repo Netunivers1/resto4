@@ -956,7 +956,7 @@ var routing = __WEBPACK_IMPORTED_MODULE_0__angular_router__["g" /* RouterModule 
 // const host = 'https://aretmic.com/api/resto2/web/app_dev.php';
 var host = 'http://mividy.com/api/resto4/web/app_dev.php';
 //const host = 'http://localhost/net_api/web/app_dev.php';
-//const host = 'http://localhost:8000';
+// const host = 'http://localhost:8000';
 var urlApi = host;
 
 
@@ -1123,12 +1123,12 @@ var BoissonComponent = /** @class */ (function () {
     }
     BoissonComponent.prototype.ngOnInit = function () {
         var _this = this;
-        var url = __WEBPACK_IMPORTED_MODULE_2__config_host__["a" /* urlApi */] + '/boisson';
+        var url = __WEBPACK_IMPORTED_MODULE_2__config_host__["a" /* urlApi */] + '/boisson/0';
         this.http.get(url)
             .map(function (response) { return response.json(); })
             .subscribe(function (data) {
-            _this.boissons = data;
-            _this.boissonsCharger = (data.length > 0) ? true : false;
+            _this.boissons = data.contain;
+            _this.boissonsCharger = (data.contain.length > 0) ? true : false;
         });
     };
     BoissonComponent = __decorate([
@@ -1261,12 +1261,12 @@ var DessertComponent = /** @class */ (function () {
     }
     DessertComponent.prototype.ngOnInit = function () {
         var _this = this;
-        var url = __WEBPACK_IMPORTED_MODULE_2__config_host__["a" /* urlApi */] + '/dessert';
+        var url = __WEBPACK_IMPORTED_MODULE_2__config_host__["a" /* urlApi */] + '/dessert/0';
         this.http.get(url)
             .map(function (response) { return response.json(); })
             .subscribe(function (data) {
-            _this.desserts = data;
-            _this.dessertsCharger = (data.length > 0) ? true : false;
+            _this.desserts = data.contain;
+            _this.dessertsCharger = (data.contain.length > 0) ? true : false;
         });
     };
     DessertComponent = __decorate([
@@ -1405,12 +1405,12 @@ var menuComponent = /** @class */ (function () {
     }
     menuComponent.prototype.ngOnInit = function () {
         var _this = this;
-        var url = __WEBPACK_IMPORTED_MODULE_2__config_host__["a" /* urlApi */] + '/menu';
+        var url = __WEBPACK_IMPORTED_MODULE_2__config_host__["a" /* urlApi */] + '/menu/0';
         this.http.get(url)
             .map(function (response) { return response.json(); })
             .subscribe(function (data) {
-            _this.menus = data;
-            _this.menusCharger = (data.length > 0) ? true : false;
+            _this.menus = data.contain;
+            _this.menusCharger = (data.contain.length > 0) ? true : false;
         });
     };
     menuComponent = __decorate([
@@ -1656,12 +1656,12 @@ var PizzaComponent = /** @class */ (function () {
     }
     PizzaComponent.prototype.ngOnInit = function () {
         var _this = this;
-        var url = __WEBPACK_IMPORTED_MODULE_2__config_host__["a" /* urlApi */] + '/pizza';
+        var url = __WEBPACK_IMPORTED_MODULE_2__config_host__["a" /* urlApi */] + '/pizza/0';
         this.http.get(url)
             .map(function (response) { return response.json(); })
             .subscribe(function (data) {
-            _this.pizzas = data;
-            _this.pizzasCharger = (data.length > 0) ? true : false;
+            _this.pizzas = data.contain;
+            _this.pizzasCharger = (data.contain.length > 0) ? true : false;
         });
     };
     PizzaComponent = __decorate([
@@ -1731,12 +1731,12 @@ var PlatComponent = /** @class */ (function () {
     }
     PlatComponent.prototype.ngOnInit = function () {
         var _this = this;
-        var url = __WEBPACK_IMPORTED_MODULE_2__config_host__["a" /* urlApi */] + '/plat';
+        var url = __WEBPACK_IMPORTED_MODULE_2__config_host__["a" /* urlApi */] + '/plat/0';
         this.http.get(url)
             .map(function (response) { return response.json(); })
             .subscribe(function (data) {
-            _this.plats = data;
-            _this.platsCharger = (data.length > 0) ? true : false;
+            _this.plats = data.contain;
+            _this.platsCharger = (data.contain.length > 0) ? true : false;
         });
     };
     PlatComponent = __decorate([
@@ -1807,8 +1807,8 @@ var PlatdujourComponent = /** @class */ (function () {
     PlatdujourComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.loading = true;
-        this.http.get(__WEBPACK_IMPORTED_MODULE_2__config_host__["a" /* urlApi */] + '/platdujour').subscribe(function (response) {
-            _this.products = (response.json().length) ? response.json() : [];
+        this.http.get(__WEBPACK_IMPORTED_MODULE_2__config_host__["a" /* urlApi */] + '/platdujour/0').subscribe(function (response) {
+            _this.products = (response.json().contain.length) ? response.json().contain : [];
             _this.loading = false;
         });
     };
@@ -1962,8 +1962,8 @@ var Vins2Component = /** @class */ (function () {
     Vins2Component.prototype.ngOnInit = function () {
         var _this = this;
         this.loading = true;
-        this.http.get(__WEBPACK_IMPORTED_MODULE_2__config_host__["a" /* urlApi */] + '/vins').subscribe(function (response) {
-            _this.products = (response.json().length) ? response.json() : [];
+        this.http.get(__WEBPACK_IMPORTED_MODULE_2__config_host__["a" /* urlApi */] + '/vins/0').subscribe(function (response) {
+            _this.products = (response.json().contain.length) ? response.json().contain : [];
             _this.loading = false;
         });
     };
