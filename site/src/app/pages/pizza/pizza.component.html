@@ -8,22 +8,24 @@
     	<div class="col-md-6">
     		
     	</div>
-    	<div class="col-md-2"><h4>Petite</h4></div>
-    	<div class="col-md-2"><h4>Grande</h4></div>
+    	<div class="col-md-2 hidden-sm-down"><h4>Petite</h4></div>
+    	<div class="col-md-2 hidden-sm-down"><h4>Grande</h4></div>
     </div>
 
-    <div class="row aff_mobile" *ngFor="let i of pizzas" style="margin-bottom: 20px;" >
-    	<div class="col-md-2"></div>
-        <div class="col-md-6">
-            <h2>{{i.nom | uppercase}}</h2>
-            <p>{{i.ingredient}}</p>
+    <div class="row aff_mobile menu-details" *ngFor="let i of pizzas" style="margin-bottom: 20px;" >
+        <div class="col-md-2">            
         </div>
 
-        <div class="col-md-2">  
-        	<p>{{i.pm}}</p>          
+        <div class="col-md-6 col-sm-8">
+            <h2>{{i.nom | uppercase}} <span class="hidden-md-up">(PM: {{i.pm}} / GM: {{i.gm}})</span></h2>
+            <p>{{i.ingredient}}</p>
         </div>
-        <div class="col-md-2"> 
-        	<p>{{i.gm}}</p>           
-        </div>        
+        <div class="col-md-2 col-sm-4 hidden-sm-down price-detail">
+            {{i.pm}}
+        </div>
+
+        <div class="col-md-2 col-sm-4 hidden-sm-down price-detail"> 
+            {{i.gm}}           
+        </div>
     </div>
 </div>
